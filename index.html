@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a0806a35f6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Online Document Request | Sarmiento Campus</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <script>
+        sessionStorage.clear();
+    </script>
+</head>
+<body>
+    <main>
+        <nav>   
+            <div class="container">
+                <div class="logo">
+                    <img src="img/logo.png" alt="logo">
+                    <div class="logo-content">
+                        <h2>BULACAN STATE UNIVERSITY</h2>
+                        <h3>Sarmiento Campus</h3>
+                    </div>
+                </div>
+                <div class="nav-right">
+                    <ul class="navigation" id="navigation">
+                        <li><a href="student-verification.php">Request Form</a></li>
+                        <li><a href="status-request.php">Request Status</a></li>
+                        <li><a href="admin-login.php" id="admin">Admin Log in</a></li>
+                    </ul>
+                    <img src="img/menu.png" alt="menu" id="menu" onclick="dropdown()">
+                </div>
+            </div>
+        </nav>
+        <header class="showcase">
+            <div class="showcase-img">
+                <img src="img/showcase-desktop.jpg" alt="" class="desktop">
+                <img src="img/showcase-mobile.jpg" alt="" class="mobile">
+                <div class="overlay"></div>
+                <div class="showcase-content">
+                    <h1>ONLINE DOCUMENT REQUEST</h1>
+                    <a href="student-verification.php">Request a Document</a>
+                </div>
+            </div>
+        </header>
+        <section class="showcase showcase-wrapper">
+            <h2>The Office of the University Registrar</h2>
+            <p>The Office of the University Registrar is responsible for student 
+                admissions and registration, grade reporting and transcript of records generation, 
+                and maintenance of academic records. The online document request system will help 
+                the registrar to manage the file request of the students credentials into the office.
+            </p>
+            <p>Due to the volume of requests of credentials to the registrar some of the requested 
+                file are taking too long to receive and some are even left undone. Also because of the current 
+                situation only limited number can enter the campus. The system aims to make requesting 
+                credentials much easier and faster .</p>
+        </section>
+        <section class="cards-wrapper">
+            <div class="card-1 card">
+                <h3>Get Your Records</h3>
+                <img class="card-img"src="img/document.png" alt="document">
+                
+                <p>Request  for a copy of your</p>
+                
+                <ul>
+                    <li>Transcripts</li>
+                    <li>Certificates</li>
+                    <li>COR, ROG</li>
+                </ul>
+                <p>and other academic related records.</p>
+                <a href="student-verification.php">Request Now</a>
+            </div>
+            <div class="card-2 card">
+                <h3>Track Your Request</h3>
+                <img class="card-img"src="img/search.png" alt="search">
+                
+                <p>Track your request to see the progress. Use the provided Reference Number. </p>
+                
+                <a href="status-request.php">Track Status</a>
+            </div>
+            <div class="card-3 card">
+                <h3>Learn More</h3>
+                <img class="card-img"src="img/help.png" alt="help">
+                
+                <p>Don't know how to process your request? Can't finish your request?
+                    Do you have questions?
+                </p>
+                
+                <a href="learn-more.html">Help Me</a>
+            </div>
+        </section>
+      
+    </main>
+    <footer>
+        <div class="inner-footer">
+            <h5>&copy; Coyright 2021| Bulacan State University</h5>
+            <h5>Need Help? Contact the <a href="mailto:registrar.sarmiento@bulsu.edu.ph">
+                Registrar's Office </a></h5>
+        </div>
+    </footer>
+
+    <script>
+        function dropdown(){
+            document.getElementById("navigation").classList.toggle("show");
+        }
+        
+    </script>
+</body>
+</html>

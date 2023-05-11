@@ -1,0 +1,139 @@
+@import url(admin-portal.css);
+
+
+.user-management tr{
+    grid-template-columns: repeat(9, calc(100%/9)) !important;
+}
+#accomplished tr{
+    grid-template-columns: repeat(12, calc(1850px/12));
+    grid-gap: 10px;
+    width: 100%;
+}
+
+
+ 
+@media (max-width:1500px){
+    .user-management tr{
+        grid-template-columns: repeat(9, calc(1350px/9)) !important;
+    } 
+}
+
+.button-container ul li a{
+    color: black;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding:5px 0;
+    text-align: center;
+    display: block;
+}
+.button-container ul li a:hover{
+    background-color: rgb(223, 210, 210);
+}
+.button-container ul li{
+    width: 150px; 
+    border: 1px solid var(--font-color-black);
+}
+.button-container ul, 
+.user-management-nav ul {
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.user-management-nav ul{
+    margin: 60px auto 30px auto;
+    max-width: 800px;
+    font-size: 1.8em;
+    font-weight: 700;
+}
+.user-management-nav ul li a{
+    color: black;
+    padding-bottom: 10px;
+    
+}
+
+
+.action-button{
+    font-family: sans-serif;
+    color:#fff;
+    border:1px solid rgb(68, 67, 67);
+    font-size:1em;
+    cursor:pointer;
+    transition:800ms ease all;
+    padding:5px;
+    text-decoration: none;
+    
+  }
+.action-button:hover{
+    background:none;
+    color:#1AAB8A;
+    border:1px solid #1AAB8A;
+  }
+ 
+.delete,
+.reject{
+    background-color: #e05350;
+    color: var(--font-color);
+}
+.update{
+    background-color: #358ac7;
+    color: var(--font-color);
+}
+#done{
+    background-color: #4db965;
+    color: var(--font-color);
+}
+.reject{
+    line-height: 3em;
+    padding: 5px 28px;
+}
+#working{
+    pointer-events: none;
+    background:none;
+    color:#1AAB8A;
+    border:1px solid #1AAB8A;
+}
+.add{
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    background-color: #4db965;
+   
+    font-size: 1em;
+    
+    height: 50px;
+}
+.add a{
+    padding: 10px;
+}
+.add:hover i,.add:hover a{
+    color: #1AAB8A;
+}
+.add i{
+    margin-right: 10px;
+}
+
+
+.user-management-nav ul li a.active{
+    border-bottom: 1px solid black;
+}
+.user-management-nav ul li a:hover:not(li.active){
+    border-bottom: 1px solid black;
+}
+.status{
+    font-style: italic;
+    color: rgb(85, 84, 84);
+}
+@media (max-width:650px){
+    .user-management-nav ul{
+        display: block;
+    }
+    .user-management-nav ul li{
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: .8em;
+        
+    }
+
+}

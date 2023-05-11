@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a0806a35f6.js" crossorigin="anonymous"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="css/request-form.css">
+    
+    <title>Online Document Request | Sarmiento Campus</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+ 
+</head>
+<body>
+    <main>
+        <nav>   
+            <div class="container">
+                <div class="logo">
+                    <img src="img/logo.png" alt="logo">
+                    <div class="logo-content">
+                        <h2>BULACAN STATE UNIVERSITY</h2>
+                        <h3>Sarmiento Campus</h3>
+                    </div>
+                </div>
+                <div class="nav-right">
+                    <ul class="navigation" id="navigation">
+                        <li id="exit"><a href="index.html" class="exit">Home</a></li>
+                        <li><a href="student-verification.php">Request Form</a></li>
+                        <li><a href="status-request.php">Request Status</a></li>
+                        <li><a href="admin-login.php" id="admin">Admin Log in</a></li>
+                    </ul>
+                    <img src="img/menu.png" alt="menu" id="menu" onclick="dropdown()">
+                </div>
+            </div>
+        </nav>
+  
+        <div class="form-container" id="end-container">
+            <h1>ONLINE DOCUMENT REQUEST</h1>
+            <div class="progresscontainer">
+                <ul class="progressbar">
+                    <li class="active">Verify</li>
+                    <li class="active">Fill up Information</li>
+                    <li class="active">Review your request</li>
+                    <li class="active">Finish</li>
+                </ul>
+            </div>
+            <div class="end-card"id="end-form">
+                <h2>THANK YOU FOR USING OUR SYSTEM</h2>
+                <h3 class = "end-formh3">Reference No. <span id="ref"> </span></h3>
+                <p>Your request has been successfully submitted 
+                    in the Bulacan State University - Sarmiento Campus
+                     Registrar's Office, rest assured that it will be 
+                     processed as soon as possible. It will be send through 
+                     your provided gmail addressed. You can use the Reference 
+                     Number to track the status of your request</p>
+
+                     <input type="submit" name="submit"value="FINISH" id="end-submit" onclick="exit()">
+            </div>
+        </div>    
+           
+    </main>
+    <footer>
+        <div class="inner-footer">
+            <h5>&copy; Coyright 2021| Bulacan State University</h5>
+            <h5>Need Help? Contact the <a href="mailto:registrar.sarmiento@bulsu.edu.ph">
+                Registrar's Office </a></h5>
+        </div>
+    </footer>
+
+    <script>
+        function dropdown(){
+            document.getElementById("navigation").classList.toggle("show");
+        }
+        
+
+       document.getElementById('ref').innerHTML=JSON.parse(sessionStorage.getItem("jsArray"));
+        function exit(){
+            document.location.href = "index.html";
+        };
+    </script>
+      
+</body>
+</html>

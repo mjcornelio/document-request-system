@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a0806a35f6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Online Document Request | Sarmiento Campus</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+</head>
+<body>
+    <main>
+        <nav>   
+            <div class="container">
+                <div class="logo">
+                    <img src="img/logo.png" alt="logo">
+                    <div class="logo-content">
+                        <h2>BULACAN STATE UNIVERSITY</h2>
+                        <h3>Sarmiento Campus</h3>
+                    </div>
+                </div>
+                <div class="nav-right">
+                    <ul class="navigation" id="navigation">
+                        <li id="exit"><a href="index.html" class="exit">Home</a></li>
+                        <li><a href="student-verification.php">Request Form</a></li>
+                        <li><a href="status-request.php">Request Status</a></li>
+                        <li><a href="admin-login.php" id="admin">Admin Log in</a></li>
+                    </ul>
+                    <img src="img/menu.png" alt="menu" id="menu" onclick="dropdown()">
+                </div>
+            </div>
+        </nav>
+
+        <div class="help-page">
+            <h3>How to Process a Request?</h3>
+            <div class="boxx" id="box-1"> 
+                <h4>Quick Reminder</h4>
+                <p>This option to request for documents is intended ONLY for students/alumni who attended 
+                    the Sarmiento Campus from Academic Year 2000 to present. For requests falling below the 
+                    A.Y. 2000, you may request your document by sending an email to the Office of the 
+                    University Registrar at registrar@bulsu.edu.ph
+                </p>
+                <p>Please make sure to settle any outstanding balance on your account. You can check your 
+                    outstanding balance by logging in to the Student Portal or you may contact the Accounting 
+                    Office at 919-7800 local 1006.
+                </p>
+            </div>
+            <div class="boxx">
+                <h4>Step 1: Verification</h4>
+                <p>Sign in to your account by entering your Student Number and your E-mail Address.
+                </p>
+            </div>
+            <div class="boxx">
+                <h4>Step 2: Fill Up the Request Form and Select a Documents</h4>
+                <p>After successful verification, provide your correct information (Student Number, First Name,
+                    Last Name etc.).
+                </p>
+                <p id="note"><b>Note:</b> Please provide your recent contact information and make sure that 
+                    you are providing a valid email address.
+                </p>
+                <p>Select the documents you want to request. Also, state the purpose of your request.
+                </p>
+            </div>
+         
+            <div class="boxx">
+                <h4>Step 3: Review your Request</h4>
+                <p>Review your request for any corrections and modifications needed. Then click submit.</p>
+            </div>
+            <div class="boxx">
+                <h4>Step 4: Track your Request</h4>
+                <p>After submitting your request, you will be provided by a <b>Reference Number</b>.</p>
+                <p>Save your Reference Number for later. You can track your request by going 
+                    to <b>Track your Request Page</b>.</p>
+            </div>
+        </div>
+       
+
+    </main>
+    <footer>
+        <div class="inner-footer">
+            <h5>&copy; Coyright 2021| Bulacan State University</h5>
+            <h5>Need Help? Contact the <a href="mailto:registrar.sarmiento@bulsu.edu.ph">
+                Registrar's Office </a></h5>
+        </div>
+    </footer>
+    <script>
+        function dropdown(){
+            document.getElementById("navigation").classList.toggle("show");
+        }
+        
+    </script>
+</body>
+</html>

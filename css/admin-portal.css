@@ -1,0 +1,231 @@
+@import url(style.css);
+
+.admin-navigation ul{
+    display: grid;
+    grid-template-columns: repeat(3,1fr); 
+    margin: 0px auto; 
+    max-width: 1600px;
+}
+.admin-navigation li{
+    background-color: #3B3636;
+    text-align: center;
+    
+}
+.admin-navigation li:not(:first-child){
+    border-left: 2px solid var(--font-color);
+}
+.admin-navigation a{
+    color: var(--font-color);
+    background-color: #3B3636;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 10px 0;
+    display: block;
+}
+.admin-navigation a:is(:link, :active, :visited).active{
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid var(--font-color-black);
+    font-size: 1.3em;
+}
+.admin-navigation a:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.refresh-btn{
+    background: none;
+    border: none;
+
+}
+.refresh{
+    width: 40px;
+}
+.table-group .icon{
+    width: 15px;
+}
+
+/* --------Table------- */
+.table-container{
+    margin: 70px auto 10px auto;
+    margin-bottom: 90px;
+    position: relative;
+    padding: 0 30px;
+    
+}
+.table-group{
+    color: var(--font-color-black);
+    max-width: 2000px;
+    margin: auto;
+    min-height: 600px;
+    height: 70vh;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.18);
+    overflow-y: auto;
+    overflow-x: scroll;
+    
+}
+#theader{
+    display: flex;
+    width: 100%;
+    min-width: 1350px;
+    position: relative;
+}
+#theader .search{
+    width: 400px;
+    margin: 30px 10px;
+    margin-right: 0;
+    display: inline-block;
+}
+#theader  input[type=search] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 300px;
+    background: #f1f1f1;
+  }
+  
+  #theader .search button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+    
+  }
+  
+  #theader .search button:hover {
+    background: #0b7dda;
+  }
+
+.table-container::-webkit-scrollbar{
+    width: 20px;
+}
+.table-container::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+.table-container::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+}
+.table-container::-webkit-scrollbar-thumb:hover {
+    background-color: #a8bbbf;
+}
+
+.table-group::-webkit-scrollbar{
+    width: 20px;
+}
+.table-group::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+.table-group::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+}
+.table-group::-webkit-scrollbar-thumb:hover {
+    background-color: #a8bbbf;
+}
+table{
+    font-size: 1em;
+    width: 100%;
+    margin: auto;
+   
+
+}
+table tr{
+    display: grid;
+    grid-template-columns: repeat(10, calc(1850px/10));
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(49, 47, 47, 0.486); 
+    width: 100%; 
+}
+
+table#request tr{
+    grid-template-columns: repeat(13, calc(1850px/13));
+    grid-gap: 10px;
+    width: 100%;
+}
+
+table .heading{
+    color: var(--font-color);
+    background-color: #3D2323;
+}
+table tbody tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+table tbody tr{
+    min-height: 89px;
+}
+table tbody tr:hover{
+    background-color: #ddd;
+}
+table td{
+    text-align: center;
+    padding: 0 5px;
+    word-wrap: break-word;
+   
+}
+td a{
+    color: blue;
+    text-decoration: underline;
+    word-wrap: break-word;
+}
+
+.no_result{
+    position:relative;
+    width: 100%;
+    min-width: 1350px;
+    margin: auto;
+    text-align: center;
+    top:50%;
+    line-height: 1.2em;
+    color: rgba(243, 148, 114, 0.74);
+    font-size: 2em;
+    height: 0;
+
+}
+
+
+.table-container h1.title{
+    color: var(--font-color-black);
+    font-size: 3em;
+    margin: auto;
+    text-align: center;
+    line-height: 1.8em;
+}
+
+@media (max-width:640px){
+    nav{
+        padding:5px 10px;
+    }
+    .admin-navigation ul{
+        grid-template-columns: 1fr;   
+    }
+    .admin-navigation li:not(:first-child){
+        border:none;
+    }
+    .table-container{
+        margin: 0 0 70px 0;
+        position: relative;
+        padding: 0 5px;
+    }
+    .table-container h1.title{
+        font-size: 2em;
+        margin: 10px;
+    }
+    
+    
+}
+@media (max-width:380px){
+    .nav-right #admin{
+        margin: 0;
+        font-size: 0.8em;
+        white-space: nowrap;
+    }
+}
